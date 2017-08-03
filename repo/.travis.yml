@@ -1,0 +1,29 @@
+language: python
+python:
+  - '3.5'
+cache:
+  - pip
+install:
+  - pip install .
+  - pip install -r requirements.txt
+script: 
+  - python -m unittest angelpoints.tests.main
+  - python setup.py bdist_wheel
+  - while read line; do python -m pip wheel -w dist $line; done < requirements.txt
+deploy:
+  provider: s3
+  access_key_id: redacted
+  secret_access_key:
+    secure: redacted
+  bucket: redacted
+  upload-dir: AP.Python_$TRAVIS_TAG-$TRAVIS_BRANCH-$(date -u "+%Y%m%d")
+  local_dir: dist
+  on:
+    repo: redacted
+    tags: true
+    all_branches: true
+  skip_cleanup: true
+notifications:
+  slack: redacted
+  email: false
+ 
