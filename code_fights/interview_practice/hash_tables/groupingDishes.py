@@ -66,7 +66,7 @@ inputs = [
      ["Fried Rice", "Rice", "Onion", "Nuts"],
      ["Salad", "Spinach", "Nut"],
      ["Sandwich", "Cheese", "Bread"],
-     ["Quesadilla", "Chickens", "Cheeseeee"]],
+     ["Quesadilla", "Chickens", "Cheese"]],
     [["First", "a", "b", "c", "d", "e", "f", "g", "h", "i"],
      ["Second", "i", "h", "g", "f", "e", "x", "c", "b", "a"]]
 ]
