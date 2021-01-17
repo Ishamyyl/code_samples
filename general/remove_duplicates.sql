@@ -29,7 +29,7 @@ INSERT INTO tbl SELECT * FROM temp_tbl;
 DROP TABLE IF EXISTS temp_tbl;
                
 /*
-               Imagine you have are tasked with distributing an entire regular playing card deck to 52 people.
+               Imagine you have been tasked with distributing an entire regular playing card deck to 52 people.
                You see that a blackjack shoe works well at distributing cards and decide to use that.
                However, after distributing, you start to hear "cool I have the Ace of Spaces" multiple times from the group, 
                and you realize there's a problem: you learn that blackjack shoes have between 6 and 8 decks of cards, and you distributed duplicate cards to people.
@@ -56,5 +56,5 @@ DROP TABLE IF EXISTS temp_tbl;
                2 MOD 5 = 2, which is greater than 0, so delete. @row is 1, then is set to 2.
                3 MOD 5 = 3, *
                4 MOD 5 = 4, *
-               5 MOD 5 = 0, so keep. @row is 4, then is set to 0.
+               5 MOD 5 = 0, so keep. @row is 4, then is set to 0, resetting the counter for the next group
 */
