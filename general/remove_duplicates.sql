@@ -20,7 +20,7 @@ JOIN (
     FROM temp_tbl
     GROUP BY pk_1, pk_2
     HAVING COUNT(*) > 1  -- Find groups that have duplicates
-) AS dupes ON dupes.pk_2 = t.pk_2 AND dupes.pk_1 = tt.pk_1
+) AS dupes ON dupes.pk_2 = tt.pk_2 AND dupes.pk_1 = tt.pk_1
 WHERE 
     (@row:=MOD(@row+1, dupes.cnt)) > 0  -- (!) Count up the duplicate records in each group, when MOD hits Zero then keep that, which resets the counter
 ;
